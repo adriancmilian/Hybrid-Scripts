@@ -5,7 +5,7 @@ function Set-ADUPN {
     .DESCRIPTION
     Set-ADUPN can be used with a CSV file in the following format "Name","UserLogon". This command will get a list of users defined in your CSV file and loop through each user and match the display name to an AD object once found it will change the UPN to the specified UPN that was put into the CSV. The command will also create a changelog in the current working directory with the Display name, Old UPN and the New UPN. If the UPN was not able to be changed it will set item in the New UPN column to ERROR.
     .PARAMETER CSV
-    Parameter is mandatory and will take values from the pipeline the values here will be looped through to change the UPN for each user and add them each to the log
+    CSV Parameter is mandatory and will take the objects in the CSV file and loop through them to change the UPN for each user and add them each to the changelog
     .PARAMETER ChangeLogPath
     Parameter is not mandatory but it can be changed it you prefer to a different location
     .EXAMPLE
